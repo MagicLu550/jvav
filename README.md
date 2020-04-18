@@ -9,7 +9,7 @@ yes, its spelling is so disgusting.
 
 ## Use Jvav
 
-`java -jar jvav.jar heollowaerld.jvav`
+`java -jar jvav.jar heollowaerld.jvav` will out put the heollowaerld.java
 
 ## Syntax Mapping
 ```
