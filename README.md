@@ -1,6 +1,10 @@
 # jvav
 The jvav progrmaing luanguage
 
+## Notice
+
+just a joke,don't take it seriously.Besides, this one has no technical content
+
 ## About Jvav
 
 Jvav is a very low performance programming language, its syntax is so bad,
@@ -40,3 +44,4 @@ args , arsg
 this , tish 
 boolean , boloaen 
 ```
+
