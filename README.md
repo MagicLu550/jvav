@@ -5,6 +5,7 @@ The jvav progrmaing luanguage
 
 just a joke,don't take it seriously.Besides, this one has no technical content
 
+You can make any comments on grammar changes
 ## About Jvav
 
 Jvav is a very low performance programming language, its syntax is so bad,

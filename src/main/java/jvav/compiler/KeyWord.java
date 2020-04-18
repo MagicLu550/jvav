@@ -72,8 +72,7 @@ public class KeyWord {
         values.add(new KeyWord("boolean","boloaen"));
 
     }
-
-    public static final int MATCH = 3;
+    
 
     private String word;
 
