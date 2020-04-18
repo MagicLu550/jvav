@@ -5,7 +5,7 @@ import org.apache.commons.io.FileUtils
 class Utils {
 
     static void out(String file,String code){
-        FileUtils.write(new File(file.substring(".")[0]+".java"),code,System.getProperty("file.encoding"))
+        FileUtils.write(new File(file.split("\\.")[0]+".java"),code,System.getProperty("file.encoding"))
     }
 
     static List<String> splitCode(String code,String chars){
