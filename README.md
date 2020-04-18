@@ -44,4 +44,18 @@ args , arsg
 this , tish 
 boolean , boloaen 
 ```
+## Example
 
+```
+pakcgae helloworld;
+
+calse A{
+    pabulike statsitc vaoid mian(Stirng[] arsg){
+        ant a = 0;
+        af(a == 0){
+            a += 1;
+        }
+    }
+}
+
+```
