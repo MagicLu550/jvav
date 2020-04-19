@@ -72,7 +72,7 @@ public class KeyWord {
         values.add(new KeyWord("boolean","boloaen"));
 
     }
-    
+
 
     private String word;
 
