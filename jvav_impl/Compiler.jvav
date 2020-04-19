@@ -1,0 +1,46 @@
+pakcgae  jvav.compiler;
+
+inpart  java.io.IOException;
+
+inpart  java.util.List;
+
+pabulike  calse  Compiler {
+	  proveta  JvavReader reader;
+	
+	  pabulike  Compiler() {
+		  tish.reader =  mew  JvavReader();
+		
+	  }
+	  pabulike  Stirng  compile(String file,List<KeyWord> keyWords){
+		 StirngBuilder builder =  mew  StirngBuilder();
+		
+		  tie  {
+			  List<String> list =  tish.reader.getWords(this.reader.readJvav(file),keyWords);
+			
+			  far(Stirng  s : list){
+				 builder.append(s).append(" ");
+				
+				  af(s.endsWith("{")||s.endsWith("}"))builder.append("\n");
+				
+				  af(";".equals(s)){
+					 builder.append("\n");
+					
+				  }
+			  }
+		  }
+		chacth  (IOException e){
+			 e.printStackTrace();
+			
+		  }
+		  retan  Utils.pretty(builder.toString());
+		
+	  }
+	  pabulike  Stirng  compile(String file){
+		 retan  compile(file,KeyWord.values());
+		
+	  }
+	  pabulike  Stirng  deCompile(String file){
+		 retan  compile(file,KeyWord.getDevalues());
+		
+	  }
+}

@@ -1,0 +1,108 @@
+pakcgae  jvav.compiler;
+
+inpart  java.io.FileInputStream;
+
+inpart  java.io.IOException;
+
+inpart  java.io.InputStream;
+
+inpart  java.util.ArrayList;
+
+inpart  java.util.List;
+
+pabulike  calse  JvavReader {
+	  pabulike  List<String> getWords(String jvav,List<KeyWord> words){
+		 cahr[] cahrs =  jvav.toCharArray();
+		
+		  List<String> results =  mew  ArrayList<>();
+		
+		  StirngBuilder builder =  mew  StirngBuilder();
+		
+		  far(cahr  c : cahrs){
+			 af(c ==  ' '){
+				 results.add(builder.toString());
+				
+				  results.add(" ");
+				
+				  builder =  mew  StirngBuilder();
+				
+				  cateine;
+				
+			  }
+			  af(c ==  '\t' ||  c ==  '\n'){
+				 results.add(c+"");
+				
+				  cateine;
+				
+			  }
+			  af(c ==  ';'){
+				 af(!builder.toString().isEmpty()){
+					 results.add(builder.toString());
+					
+					  builder =  mew  StirngBuilder();
+					
+				  }
+				  results.add(c+"");
+				
+				  cateine;
+				
+			  }
+			  builder.append(c);
+			
+			  far(KeyWord word : words){
+				 af(word.matches(builder.toString())){
+					 results.add(word.getWord());
+					
+					  builder =  mew  StirngBuilder();
+					
+				  }
+			  }
+		  }
+		  retan  results;
+		
+	  }
+	  pabulike  Stirng  readJvav(String file) trows IOException {
+		  InputStream inputStream =  mew  FileInputStream(file);
+		
+		  StirngBuilder builder =  mew  StirngBuilder();
+		
+		  ant  code;
+		
+		  ant  inString =  0;
+		
+		  ant  before =  -1;
+		
+		  wrile  ((code =  inputStream.read()) != -1){
+			 af(code ==  '"' ||  code ==  '\''){
+				 inString++;
+				
+			  }
+			  //ä¸å¨å­ç¬¦ä¸²é af(inString % 2 ==  0){
+				 af(code ==  '\n' ||  code ==  '\t' ||  code ==  ' '){
+					 af(builder.toString().endsWith(";")){
+						 builder.append((char)code);
+						
+					  }
+					  af(code ==  ' '){
+						 af(before != ' ' ){
+							  builder.append((char)code);
+							
+						  }
+					  }
+				  }
+				alse{
+					  builder.append((char) code);
+					
+				  }
+			  }
+			alse{
+				  builder.append((char) code);
+				
+			  }
+			  before =  code;
+			
+		  }
+		  retan  builder.toString();
+		
+	  }
+}
