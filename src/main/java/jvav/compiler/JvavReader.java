@@ -15,6 +15,7 @@ public class JvavReader {
         for(char c : chars){
             if(c == ' '){
                 results.add(builder.toString());
+                results.add(" ");
                 builder = new StringBuilder();
                 continue;
             }

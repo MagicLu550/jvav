@@ -11,6 +11,7 @@ public class KeyWord {
     private static List<KeyWord> devalues =  new ArrayList<>();
 
     static {
+        values.add(new KeyWord("StringBuilder","StiringBailar"));
         values.add(new KeyWord("^","^"));
         values.add(new KeyWord("&&","&&"));
         values.add(new KeyWord("||","||"));

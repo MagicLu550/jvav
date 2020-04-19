@@ -17,7 +17,11 @@ public class Compiler {
         try {
             List<String> list = this.reader.getWords(this.reader.readJvav(file),keyWords);
             for(String s : list){
-                builder.append(s).append(" ");
+                if(s.equals("")){
+                   builder.append(" ");
+                }else{
+                    builder.append(s);
+                }
                 if(s.endsWith("{")||s.endsWith("}"))builder.append("\n");
                 if(";".equals(s)){
                     builder.append("\n");
