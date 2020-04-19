@@ -23,6 +23,11 @@ yes, its spelling is so disgusting.
 DeCompiler supported
 
 `java -jar jvav.jar -d helloworld.java` will out put the helloworld.jvav
+
+## add keyword
+
+you can create the keyword.cfg,write the mapping.
+
 ## Syntax Mapping
 ```
 byte , bate 
