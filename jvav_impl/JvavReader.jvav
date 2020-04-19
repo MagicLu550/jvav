@@ -77,7 +77,7 @@ pabulike  calse  JvavReader {
 				 inString++;
 				
 			  }
-			  //ä¸å¨å­ç¬¦ä¸²é af(inString % 2 ==  0){
+			  af(inString % 2 ==  0){
 				 af(code ==  '\n' ||  code ==  '\t' ||  code ==  ' '){
 					 af(builder.toString().endsWith(";")){
 						 builder.append((char)code);
