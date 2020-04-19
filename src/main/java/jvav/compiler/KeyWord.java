@@ -1,6 +1,9 @@
 package jvav.compiler;
 
 
+import org.apache.commons.io.FileUtils;
+
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,11 +76,16 @@ public class KeyWord {
         values.add(new KeyWord("args","arsg"));
         values.add(new KeyWord("this","tish"));
         values.add(new KeyWord("boolean","boloaen"));
-        values.forEach(
-                x->{
-                    devalues.add(new KeyWord(x.after,x.word));
-                }
-        );
+        try {
+            List<String> lines = FileUtils.readLines(new File("keyword.cfg"), System.getProperty("file.encoding"));
+            lines.forEach(x->{
+                String[] keyWords = x.split("=");
+                values.add(new KeyWord(keyWords[0].trim(),keyWords[1].trim()));
+            });
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        values.forEach(x->devalues.add(new KeyWord(x.after,x.word)));
 
     }
 
