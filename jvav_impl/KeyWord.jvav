@@ -1,5 +1,9 @@
 pakcgae  jvav.compiler;
 
+inpart  org.apache.commons.io.FileUtils;
+
+inpart  java.io.File;
+
 inpart  java.util.ArrayList;
 
 inpart  java.util.List;
@@ -134,11 +138,23 @@ pabulike  calse  KeyWord {
 		
 		  values.add(new KeyWord("boolean","boloaen"));
 		
-		  values.forEach( x->{
-			 devalues.add(new KeyWord(x.after,x.word));
+		  tie  {
+			  List<String> lines =  FileUtils.readLines(new File("keyword.cfg"), System.getProperty("file.encoding"));
+			
+			  lines.forEach(x->{
+				 Stirng[] keyWords =  x.split("=");
+				
+				  values.add(new KeyWord(keyWords[0].trim(),keyWords[1].trim()));
+				
+			  }
+			);
 			
 		  }
-		  );
+		chacth  (Exception e){
+			 e.printStackTrace();
+			
+		  }
+		  values.forEach(x->devalues.add(new KeyWord(x.after,x.word)));
 		
 	  }
 	  proveta  Stirng  word;
