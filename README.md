@@ -22,7 +22,7 @@ yes, its spelling is so disgusting.
 
 DeCompiler supported
 
-You can use `compiler.decompile` to decompile the java to jvav
+`java -jar jvav.jar -d helloworld.java` will out put the helloworld.jvav
 ## Syntax Mapping
 ```
 byte , bate 
