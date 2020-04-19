@@ -16,6 +16,9 @@ yes, its spelling is so disgusting.
 
 `java -jar jvav.jar heollowaerld.jvav` will out put the heollowaerld.java
 
+DeCompiler supported
+
+You can use `compiler.decompile` to decompile the java to jvav
 ## Syntax Mapping
 ```
 byte , bate 

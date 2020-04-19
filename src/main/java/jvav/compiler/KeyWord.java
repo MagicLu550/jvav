@@ -6,7 +6,9 @@ import java.util.List;
 
 public class KeyWord {
 
-    public static List<KeyWord> values = new ArrayList<>();
+    private static List<KeyWord> values = new ArrayList<>();
+
+    private static List<KeyWord> devalues =  new ArrayList<>();
 
     static {
         values.add(new KeyWord("^","^"));
@@ -70,6 +72,11 @@ public class KeyWord {
         values.add(new KeyWord("args","arsg"));
         values.add(new KeyWord("this","tish"));
         values.add(new KeyWord("boolean","boloaen"));
+        values.forEach(
+                x->{
+                    devalues.add(new KeyWord(x.after,x.word));
+                }
+        );
 
     }
 
@@ -85,6 +92,10 @@ public class KeyWord {
 
     public static List<KeyWord> values(){
         return values;
+    }
+
+    public static List<KeyWord> getDevalues() {
+        return devalues;
     }
 
     public String getWord() {

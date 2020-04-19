@@ -8,9 +8,8 @@ import java.util.List;
 
 public class JvavReader {
 
-    public List<String> getWords(String jvav){
+    public List<String> getWords(String jvav,List<KeyWord> words){
         char[] chars = jvav.toCharArray();
-        List<KeyWord> words = KeyWord.values();
         List<String> results = new ArrayList<>();
         StringBuilder builder = new StringBuilder();
         for(char c : chars){
