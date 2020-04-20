@@ -6,8 +6,9 @@ The jvav progrmaing luanguage
 ## Notice
 
 just a joke,don't take it seriously.Besides, this one has no technical content
-
+Here is a misspelling on purpose.
 You can make any comments on grammar changes
+
 ## About Jvav
 Introduction: jvav was proposed by Zhang Haoyang and researched by many developers. At present, there are three versions of jvav, namely jvav se jvav ee jvav me, more than 114.514 million people use jvav, and more than 2.5 million companies use jvav to make websites. The game mini is developed using jvav
 
